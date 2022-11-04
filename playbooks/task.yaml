@@ -1,0 +1,13 @@
+--- #start of yaml file
+- name: My first play    #this is optional lone, this is name of play
+  hosts: localhost       #this is the target
+  tasks: 
+    - name: Task1        #this is optinal line, this is task 1
+      command: "ls -l /tmp"
+    - name: Task2
+      command: "ls -l /etc"
+    - name: Task3
+      file: 
+        path: /tmp/testfile1
+        state: touch
+        mode: u=wrx,g+wx,o+x

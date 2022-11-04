@@ -1,0 +1,22 @@
+--- 
+- name: User adding playbook
+  hosts: localhost
+  tasks: 
+    - name: create group
+      group:
+        name: Amy
+        gid: 2500     
+    - name: Useradd
+      user:
+        name: amy
+        uid: 2500
+        group: 2500
+    - name: changing file permission
+      file: 
+        path: /tmp/testfile1
+        owner: 2500
+        group: 2500
+
+
+
+
