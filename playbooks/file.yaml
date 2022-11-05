@@ -1,0 +1,18 @@
+--- 
+- name: Create files
+  hosts: localhost
+  tasks:
+  - name: Create file1
+    file: 
+      path: /tmp/file1
+      state: touch
+      mode: u+x,g+wx
+
+  - name: Create file2
+    file:
+      path: /tmp/file2
+      state: touch
+      mode: u+x,g+wx
+    
+   
+
