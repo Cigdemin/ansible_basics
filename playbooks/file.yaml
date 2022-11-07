@@ -1,6 +1,6 @@
 --- 
 - name: Create files
-  hosts: localhost
+  hosts: host1
   tasks:
   - name: Create file1
     file: 
