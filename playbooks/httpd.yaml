@@ -1,0 +1,17 @@
+--- 
+- name: install and run apache
+  hosts: testservers
+  tasks: 
+    - name: install apache
+      yum: 
+        name: httpd
+
+    - name: control status
+      systemd:
+        state: started
+        name: httpd
+
+        
+      
+      
+      
