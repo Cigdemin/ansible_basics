@@ -6,4 +6,5 @@
       yum: 
         name: '*' 
         state: latest
+      when: (ansible_facts['distribution']=="Ubuntu")
 
